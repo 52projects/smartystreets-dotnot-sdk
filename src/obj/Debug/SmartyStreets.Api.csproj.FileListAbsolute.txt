@@ -1,0 +1,9 @@
+C:\dev\smartystreets-dotnot-sdk\src\obj\Debug\SmartyStreets.Api.csprojResolveAssemblyReference.cache
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\SmartyStreets.Api.dll
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\SmartyStreets.Api.pdb
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\Newtonsoft.Json.dll
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\RestSharp.dll
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\Newtonsoft.Json.xml
+C:\dev\smartystreets-dotnot-sdk\src\bin\Debug\RestSharp.xml
+C:\dev\smartystreets-dotnot-sdk\src\obj\Debug\SmartyStreets.Api.dll
+C:\dev\smartystreets-dotnot-sdk\src\obj\Debug\SmartyStreets.Api.pdb
