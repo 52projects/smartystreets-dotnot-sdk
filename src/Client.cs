@@ -14,6 +14,7 @@ namespace SmartyStreets.Api {
         private string _apiUrl = "https://api.smartystreets.com";
         private string _authID = null;
         private string _authToken = null;
+        private Dictionary<string, string> _parameters = new Dictionary<string, string>();
         #endregion Properties
 
         #region Constructor
@@ -28,6 +29,8 @@ namespace SmartyStreets.Api {
             get {
                 if (_addressSet == null) {
                     _addressSet = new Sets.AddressSet(_apiUrl);
+                    _addressSet.AddParameter("auth-id", _authID);
+                    _addressSet.AddParameter("auth-token", _authToken);
                 }
 
                 return _addressSet;
