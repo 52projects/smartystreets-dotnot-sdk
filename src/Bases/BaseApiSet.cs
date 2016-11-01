@@ -167,7 +167,7 @@ namespace SmartyStreets.Api {
             var request = CreateRestRequest(Method.GET, SearchUrl);
 
             foreach (var pair in qo.ToDictionary()) {
-                request.AddParameter(pair.Key, pair.Value);
+                request.AddParameter(pair.Key, pair.Value, ParameterType.GetOrPost);
             }
 
             var list = ExecuteCustomRequest<S>(request);
@@ -488,6 +488,7 @@ namespace SmartyStreets.Api {
             request.RequestFormat = _contentType == ContentType.JSON ? DataFormat.Json : DataFormat.Xml;
             request.AddHeader("Accept-Encoding", "gzip,deflate");
             request.AddHeader("Content-Type", !string.IsNullOrEmpty(contentType) ? contentType : _contentType == ContentType.XML ? "application/xml" : "application/json");
+            request.AddHeader("Host", "us-street.api.smartystreets.com");
 
             if (_requestHeaders != null && _requestHeaders.Count > 0) {
                 foreach (var current in _requestHeaders) {
@@ -497,7 +498,7 @@ namespace SmartyStreets.Api {
 
             if (_parameters != null && _parameters.Count > 0) {
                 foreach (var current in _parameters) {
-                    request.AddParameter(current.Key, current.Value);
+                    request.AddParameter(current.Key, current.Value, ParameterType.GetOrPost);
                 }
             }
 

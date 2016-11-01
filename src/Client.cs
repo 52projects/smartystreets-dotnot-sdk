@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 namespace SmartyStreets.Api {
     public class Client {
         #region Properties
-        private string _apiUrl = "https://api.smartystreets.com";
+        private string _apiUrl = "https://us-street.api.smartystreets.com";
         private string _authID = null;
         private string _authToken = null;
         #endregion Properties
@@ -28,6 +28,8 @@ namespace SmartyStreets.Api {
             get {
                 if (_addressSet == null) {
                     _addressSet = new Sets.AddressSet(_apiUrl);
+                    _addressSet.AddParameter("auth-id", _authID);
+                    _addressSet.AddParameter("auth-token", _authToken);
                 }
 
                 return _addressSet;
