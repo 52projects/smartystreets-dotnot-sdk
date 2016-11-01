@@ -14,6 +14,7 @@ namespace SmartyStreets.Api {
         private string _apiUrl = "https://us-street.api.smartystreets.com";
         private string _authID = null;
         private string _authToken = null;
+        private Dictionary<string, string> _parameters = new Dictionary<string, string>();
         #endregion Properties
 
         #region Constructor
